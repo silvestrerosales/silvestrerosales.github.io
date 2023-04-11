@@ -32,45 +32,45 @@ nombres_carpetas = []
 
 # Crear las carpetas con nombres aleatorios y archivos index.html
 for i in range(num_carpetas):
-    contenido_html = f'''
-    <!DOCTYPE html>
-    <html>
-    <head>
-    <title>Boleto {i+1}</title>
-    <style>
-    body {{
+    contenido_html = f'''<!DOCTYPE html>
+<html>
+<head>
+<title>Boleto {i+1}</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {{
     background-color: black;
     color: white;
     font-family: 'Helvetica', sans-serif;
     font-size: 24px;
-    padding: 20px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
+    margin: 0;
+}}
+.texto {{
+    text-align: center;
+    opacity: 0;
+    animation: animacion 2s linear forwards;
+}}
+@keyframes animacion {{
+    0% {{
+        opacity: 0;
     }}
-
-    .animacion {{
-        animation: fadein 3s;
+    100% {{
+        opacity: 1;
     }}
-
-    @keyframes fadein {{
-        from {{
-            opacity: 0;
-        }}
-        to {{
-            opacity: 1;
-        }}
-    }}
-    </style>
-    </head>
-    <body>
-    <div class="animacion">
-    <h1>Bienvenido, tu boleto es el {i+1}</h1>
-    </div>
-    </body>
-    </html>
-    '''
+}}
+</style>
+</head>
+<body>
+<div class="texto">
+<h1>Bienvenido, tu boleto es el {i+1}</h1>
+</div>
+</body>
+</html>
+'''
     nombre_carpeta = generar_nombre_aleatorio(10)  # Generar un nombre aleatorio de 10 caracteres
     ruta_carpeta = os.path.join(directorio_base, nombre_carpeta)
     os.makedirs(ruta_carpeta)
