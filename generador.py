@@ -11,7 +11,7 @@ def generar_nombre_aleatorio(n):
 directorio_base = "./carpetas/"
 
 # Número de carpetas a crear
-num_carpetas = 56
+num_carpetas = 60
 
 # Contenido del archivo index.html
 contenido_html = f'''
@@ -77,7 +77,7 @@ body {{
     ruta_archivo_html = os.path.join(ruta_carpeta, "index.html")
     with open(ruta_archivo_html, "w") as archivo_html:
         archivo_html.write(contenido_html)
-    nombres_carpetas.append("https://silvestrerosales.github.io/carpetas/"+nombre_carpeta+"/")
+    nombres_carpetas.append(f"boleto{i+1}: "+"https://silvestrerosales.github.io/carpetas/"+nombre_carpeta+"/")
 
 # Crear archivo de texto con los nombres de las carpetas generadas
 ruta_archivo_txt = os.path.join(directorio_base, "nombres_carpetas.txt")
