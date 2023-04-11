@@ -37,9 +37,37 @@ for i in range(num_carpetas):
     <html>
     <head>
     <title>Boleto {i+1}</title>
+    <style>
+    body {{
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }}
+
+    .animacion {{
+        animation: fadein 3s;
+    }}
+
+    @keyframes fadein {{
+        from {{
+            opacity: 0;
+        }}
+        to {{
+            opacity: 1;
+        }}
+    }}
+    </style>
     </head>
     <body>
-    <h1>Bienvenido, tu numero de boleto es {i+1}</h1>
+    <div class="animacion">
+    <h1>Bienvenido, tu boleto es el {i+1}</h1>
+    </div>
     </body>
     </html>
     '''
