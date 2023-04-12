@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Boleto 33</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+        /* Estilo para el contenedor del texto */
+        .texto-fiesta{
+  /* Establece el color de fuente a dorado */
+  color: #ffd700;
+  
+  /* Agrega una sombra de texto dorada para darle un aspecto brillante */
+  text-shadow: 0px 0px 10px #ffd700;
+  
+  /* Ajusta la fuente y el tamaño para un aspecto elegante */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 36px;
+  
+  /* Agrega un fondo oscuro para resaltar el texto dorado */
+  background-color: #000000;
+  
+  
+  /* Ajusta el espaciado del texto */
+  padding: 20px;
+}
+
+        /* Animación de brillo */
+        @keyframes brillo {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+</style>
+<style>
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+.texto {
+    text-align: center;
+    opacity: 0;
+    animation: animacion 2s linear forwards;
+}
+
+.logo{
+    color:goldenrod;
+}
+@keyframes animacion {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+</style>
+</head>
+<body>
+<div class="texto">
+<div class="texto-fiesta">
+<h1>Golden House</h1>
+</div>
+<h2>Bienvenido, tu boleto es el 33</h2>
+</div>
+</body>
+</html>
