@@ -54,6 +54,10 @@ body {{
     opacity: 0;
     animation: animacion 2s linear forwards;
 }}
+
+.logo{{
+    color:goldenrod;
+}}
 @keyframes animacion {{
     0% {{
         opacity: 0;
@@ -66,7 +70,8 @@ body {{
 </head>
 <body>
 <div class="texto">
-<h1>Bienvenido, tu boleto es el {i+1}</h1>
+<h1 class="logo">Golden House</h1>
+<h2>Bienvenido, tu boleto es el {i+1}</h2>
 </div>
 </body>
 </html>
